@@ -1,11 +1,12 @@
 # Homework1
 ### Homework 1 per il Laboratorio Cyberfisico
 
+
 #### Descrizione e scelte progettuali
 Il progetto è stato sviluppato in Python.
 Esso è articolato in tre nodi:
 - `publisher`, si occupa di pubblicare ogni secondo tutte le informazioni (nome, età, dipartimento). Scrive su un topic chiamato `cyberchat`
-- `keyreader`, legge da tastiera la lettera che fungerà da filtro, controlla che sia valida e la scrive sul topic chiamato `keychat`. È stata aggiunta una `signal` per assicurare la funzionalità di *ctrl+c*, altrimenti non riconosciuta
+- `keyreader`, legge da tastiera la lettera che fungerà da filtro, controlla che sia valida e la scrive sul topic chiamato `keychat`. È stata aggiunta una `signal` per assicurare la funzionalità di *ctrl+c*, altrimenti non riconosciuta. Inoltre è stato reso l'input case insensitive
 - `shower`, è iscritto a entrambi i topic (`cyberchat` e `keychat`) e utilizza le informazioni inviate attraverso `keychat` per filtrare le informazioni di `cyberchat`; mediante una variabile globale `filtro` settata di default su 'a'. Quindi mostra a video tramite `loginfo` le informazioni richieste
 
 Pertanto il grafo dei nodi è cosi strutturato:
